@@ -12,8 +12,21 @@ jobs:
       - checkout
       - run: systeminfo
       - run:
-          name: "Check docker"
+          name: "Clone UE4"
           shell: powershell.exe
           command: |
-            echo "wwwwwwwwwwwwwwwwwwwwwww"
-            git --version
+            echo "------------------------------"
+            ls 
+            pwd
+            echo "-------------------------------"
+            echo "Start Clone"
+            git clone https://7cb46388bfeb2fe2a11bb56fc2c6f3e1b54c475d@github.com/EpicGames/UnrealEngine.git
+      - run:
+          name: "Build UE4"
+          shell: powershell.exe
+          command: |
+            echo "Start Build"
+            cd UnrealEngine
+            ./Setup.bat
+            ./GenerateProjectFiles.bat
+               
