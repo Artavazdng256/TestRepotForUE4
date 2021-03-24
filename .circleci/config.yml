@@ -20,7 +20,7 @@ jobs:
             pwd
             echo "-------------------------------"
             echo "Start Clone"
-            git clone https://25c17722a42b71778a0ab3a387ef1598189d77ed@github.com/EpicGames/UnrealEngine.git
+            git clone https://github.com/EpicGames/UnrealEngine.git
       - run:
           name: "Build UE4"
           shell: powershell.exe
